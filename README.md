@@ -5,8 +5,8 @@
 Demo user (quick test):
 
 ```js
-const demoEmail = "test@gmail.com";
-const plainPassword = "test123";
+Email = "test@gmail.com";
+Password = "test123";
 ```
 
 This repo contains two apps:
