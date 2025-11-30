@@ -14,7 +14,20 @@ export default function TopicsList() {
   if (isLoading) {
     return (
       <div className="w-full max-w-6xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8">Topics</h1>
+        <h1
+          className="
+      text-3xl        /* mobile */
+      sm:text-3xl     /* small tablets */
+      lg:text-4xl     /* laptops/desktops */
+      font-extrabold
+      tracking-tight
+      text-gray-900
+    "
+        >
+          <span className="text-gray-700">
+            Explore <span className="text-blue-500">AI Topics</span>
+          </span>
+        </h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6].map((n) => (

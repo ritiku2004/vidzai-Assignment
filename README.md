@@ -1,6 +1,13 @@
 # Vidzai — Full-stack learning app
 
-Simple, accurate project README — cleaned up and matched to the repository.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-online-brightgreen)](https://vidzai-assignment.vercel.app/)
+
+Demo user (quick test):
+
+```js
+const demoEmail = "test@gmail.com";
+const plainPassword = "test123";
+```
 
 This repo contains two apps:
 
@@ -74,10 +81,61 @@ npm run seed
   - npm start — run server
   - npm run seed — run DB seeder
 
-## Notes / Next steps
-- This README is intentionally concise and matches the implementation in the repo.
-- If you want: add a short `client/README.md` and `server/README.md` with screenshots and environment examples — I can add them next.
+Live demo
 
----
+Visit the deployed site: https://vidzai-assignment.vercel.app/
 
-If you'd like the live-demo badge added or screenshots embedded, provide the deployed URL and an image and I'll update the README accordingly.
+
+## Project introduction (why this exists)
+
+1) Problem statement
+
+Beginners want to learn AI but often quit because content is too technical. Vidzai solves this by providing micro-learning: short topics with imagery and 3-question quizzes, plus stars and progress tracking to motivate learners.
+
+2) Why this matters
+
+- Short, analogy-based summaries reduce cognitive load
+- Visual topics help memory and attention
+- Instant quiz feedback keeps learners engaged
+- Clear progress tracking encourages continued use
+
+All UI, data and flow decisions are tuned to make learning AI approachable for non-technical beginners.
+
+3) Practical feature overview
+
+A. Authentication
+- Email + password signup/login (JWT-backed)
+
+B. Topics system
+- Each topic includes an image, title, short summary and 3 MCQ questions
+
+C. Quiz logic
+- Users select answers and get a 0–3 star result; topics are marked completed on submit
+
+D. Progress tracking
+- Profile shows total stars, completed topics and a progress bar
+
+4) User flow
+
+- Sign up / Login → Browse Topics List → Open Topic → Read + Take Quiz → Submit → Stars saved → View Profile for progress
+
+5) Screens (why they exist)
+
+1. Login / Signup
+- Purpose: save user data and enable individualized progress tracking
+2. Topics List
+- Purpose: surface all concepts as an actionable grid for easy selection
+3. Topic Detail + Quiz
+- Purpose: teach concisely and test immediately through 3 MCQs
+4. Profile
+- Purpose: summarize progress and motivate continued learning
+
+6) Technical structure — (short)
+
+- Frontend (client/): React + Vite + Tailwind. Pages: Login, Signup, TopicsList, TopicDetail, Profile. Components: Navbar, Quiz, ProgressBar.
+- Backend (server/): Express routes for auth, topics and profile. JWT based authentication.
+- Database: MongoDB with Users (email, password, stars, completed topics) and Topics (summary, image, questions, answers).
+
+7) Final summary
+
+AI Concepts Explorer (Vidzai) provides a complete short-cycle learning workflow: login → explore → learn → quiz → earn stars → track progress. It’s optimized for non-technical learners.
